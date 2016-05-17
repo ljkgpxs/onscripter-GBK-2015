@@ -47,7 +47,7 @@
 #define MESSAGE_SAVE_CONFIRM "保存在%s%s？"
 #define MESSAGE_LOAD_CONFIRM "读取%s%s？"
 #define MESSAGE_RESET_CONFIRM "返回标题？"
-#define MESSAGE_END_CONFIRM "退出？"
+#define MESSAGE_END_CONFIRM "退出游戏？"
 #define MESSAGE_YES "是"
 #define MESSAGE_NO "否"
 #define MESSAGE_OK "确定"
