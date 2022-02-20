@@ -6,7 +6,7 @@
 
 INCS = `sdl-config --cflags` `smpeg-config --cflags`
 
-LIBS = `sdl-config --libs` `smpeg-config --libs` `freetype-config --libs` -lSDL_ttf -lSDL_image -lSDL_mixer -lbz2 -lm -ljpeg -framework QuickTime -framework CoreFoundation
+LIBS = `sdl-config --libs` `smpeg-config --libs` `freetype-config --libs` -lSDL_ttf -lSDL_image -lSDL_mixer -lbz2 -lm -ljpeg -framework AVFoundation -framework CoreFoundation
 DEFS = -DMACOSX -DUSE_CDROM -DUTF8_CAPTION -DUTF8_FILESYSTEM
 
 EXESUFFIX =
