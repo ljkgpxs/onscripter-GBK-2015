@@ -61,3 +61,9 @@ ONScripter
 2.安装官方版的onscripter，macOS可以使用brew install onscripter指令
 3.将第一步中得到的可执行文件，复制到官方版的程序目录的bin文件夹里面，替换原有的同名可执行文件
 4.将0.txt和default.ttf粘贴到同一目录中，终端中执行./onscripter即可
+
+========================================
+
+将quicktime改成了AVFoundation
+
+测试环境：MacOS 12.2.1 (21D62), MBP14 M1 Max
