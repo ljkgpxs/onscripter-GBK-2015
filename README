@@ -29,7 +29,9 @@ ONScripter
 	$ onscripter.exe
 
 	MacOS X の場合
-	$ make -f Makefile.MacOSX
+	[https://www.maemo.cc/2017/12/18/onscripter-gbk-for-mac.html]
+	[https://www.yukicat.net/2334/]
+	$ CPLUS_INCLUDE_PATH=/opt/homebrew/include make -f Makefile.MacOSX
 	$ onscripter
 
 	Zaurus (SL-5500, SL-A300, SL-B500, SL-C700) の場合
