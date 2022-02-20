@@ -31,6 +31,7 @@ ONScripter
 	MacOS X の場合
 	[https://www.maemo.cc/2017/12/18/onscripter-gbk-for-mac.html]
 	[https://www.yukicat.net/2334/]
+	[https://www.yukicat.net/2360/]
 	$ CPLUS_INCLUDE_PATH=/opt/homebrew/include make -f Makefile.MacOSX
 	$ onscripter
 
