@@ -1,52 +1,70 @@
 ONScripter
 
-0. �Ϥ����
+0. はじめに
 
-	�ⶶľ������ NScripter �Ѥ˺������줿������ץȤ��ȼ��˲�ᤷ�Ƽ¹Ԥ��ޤ���
-
-
-1. ư��Ķ�
-
-	libjpeg 6b, bzip2-1.0.5, SDL-1.2.14, SDL_image-1.2.10, SDL_mixer-1.2.8, SDL_ttf-2.0.9, �ڤ� SMPEG-0.4.5 ��ư���Ķ��Ǥ���
-	Linux 2.6.32 + Xvnc4 + g++ (gcc 4.4.4) �ǳ�ȯ���Ƥ��ޤ���
-	Linux, Windows Vista (Visual Studio 2008 C++), Android (HTC Desire), iPad2 ���ư���ǧ�򤷤Ƥ��ޤ���
-	����¾��MacOS X, MacOS 9, Android(Nexus One, Emulator), iPhone, iPad, PSP, FreeBSD, Solaris(on SPARC), Tru64 UNIX, OS/Warp, iPod, PocketPC, Playstation3, Wii, GP2X, NetWalker, Dreamcast ��Ǥ�ư�����򤤤������Ƥ��ޤ���
+	高橋直樹氏作の NScripter 用に作成されたスクリプトを独自に解釈して実行します。
 
 
-2. ����ѥ��롦��ư��ˡ
+1. 動作環境
 
-	����ѥ��롦��ư��ˡ�ϰʲ����̤�Ǥ���
-	��������onscripter ��¹Ԥ������ default.ttf, ������ץ�, ���������֤��ʤ���Ф����ޤ���
-	�ܤ�����Ʊ���� www/onscripter.html �򻲾Ȥ��Ƥ���������
+	libjpeg 6b, bzip2-1.0.5, SDL-1.2.14, SDL_image-1.2.10, SDL_mixer-1.2.8, SDL_ttf-2.0.9, 及び SMPEG-0.4.5 が動作する環境です。
+	Linux 2.6.32 + Xvnc4 + g++ (gcc 4.4.4) で開発しています。
+	Linux, Windows Vista (Visual Studio 2008 C++), Android (HTC Desire), iPad2 上で動作確認をしています。
+	その他、MacOS X, MacOS 9, Android(Nexus One, Emulator), iPhone, iPad, PSP, FreeBSD, Solaris(on SPARC), Tru64 UNIX, OS/Warp, iPod, PocketPC, Playstation3, Wii, GP2X, NetWalker, Dreamcast 上での動作報告をいただいています。
 
-	Linux �⤷���� FreeBSD, Solaris �ξ��
+
+2. コンパイル・起動方法
+
+	コンパイル・起動方法は以下の通りです。
+	ただし、onscripter を実行する場所に default.ttf, スクリプト, アーカイブがなければいけません。
+	詳しくは同梱の www/onscripter.html を参照してください。
+
+	Linux もしくは FreeBSD, Solaris の場合
 	$ make -f Makefile.Linux
 	$ onscripter
 
-	Windows �ξ�� (DOS �ץ���ץȤ�)
-	$ libjpeg 6b, bzip2, SDL �� SMPEG �Υ��󥹥ȡ�����˹�碌�� Makefile.Win ����
+	Windows の場合 (DOS プロンプトで)
+	$ libjpeg 6b, bzip2, SDL と SMPEG のインストール場所に合わせて Makefile.Win を修正
 	$ nmake -f Makefile.Win
 	$ onscripter.exe
 
-	MacOS X �ξ��
-	$ make -f Makefile.MacOSX
+	MacOS X の場合
+	[https://www.maemo.cc/2017/12/18/onscripter-gbk-for-mac.html]
+	[https://www.yukicat.net/2334/]
+	[https://www.yukicat.net/2360/]
+	$ CPLUS_INCLUDE_PATH=/opt/homebrew/include make -f Makefile.MacOSX
 	$ onscripter
 
-	Zaurus (SL-5500, SL-A300, SL-B500, SL-C700) �ξ��
-	�̤Υޥ���(Linux ��)��ǥ���������ѥ���
+	Zaurus (SL-5500, SL-A300, SL-B500, SL-C700) の場合
+	別のマシン(Linux 等)上でクロスコンパイル
 	$ make -f Makefile.ARMLinux
-	Zaurus �� Qtopia �夫��¹�
+	Zaurus の Qtopia 上から実行
 	$ onscripter
 
-	����ʳ��Υץ�åȥե�����Ǥϡ�Makefile.Linux ������ˤ��� Makefile.### ���äƤ���������
+	それ以外のプラットフォームでは、Makefile.Linux を雛形にして Makefile.### を作ってください。
 
-	ONScripter �ϡ������ȥǥ��쥯�ȥ�� 0.txt �⤷���� nscript.dat ��ưŪ���ɤ߹��ߡ�����ˤ������äƥ����ȥǥ��쥯�ȥ�� arc.sar �⤷���� arc.nsa ���ɤ߹��ߤޤ���
+	ONScripter は、カレントディレクトリの 0.txt もしくは nscript.dat を自動的に読み込み、それにしたがってカレントディレクトリの arc.sar もしくは arc.nsa を読み込みます。
 
 
-3. Ϣ����
+3. 連絡先
 
-	�ܥ��եȥ������˴ؤ����䤤��碌��
+	本ソフトウェアに関する問い合わせは
 
 	ogapee@aqua.dti2.ne.jp
 
-	�ޤ��Żҥ᡼��ˤƤ��ꤤ���ޤ���
+	まで電子メールにてお願いします。
+
+
+
+========================================
+面向自己的操作指南
+1.按照上面的instructions进行编译，得到onsctipter可执行文件
+2.安装官方版的onscripter，macOS可以使用brew install onscripter指令
+3.将第一步中得到的可执行文件，复制到官方版的程序目录的bin文件夹里面，替换原有的同名可执行文件
+4.将0.txt和default.ttf粘贴到同一目录中，终端中执行./onscripter即可
+
+========================================
+
+将quicktime改成了AVFoundation
+
+测试环境：MacOS 12.2.1 (21D62), MBP14 M1 Max
